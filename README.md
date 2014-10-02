@@ -1,4 +1,6 @@
 ## Rde\Facade
+colin1124x/facade 1.0.0 2014-10
+php >= 5.3
 
 ### 使用
 #### 初始化
