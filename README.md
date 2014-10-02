@@ -5,7 +5,7 @@ php >= 5.3
 ### 使用
 #### 初始化
 
-    // 指定IoC容器(不限定哪種IoC容器實作,但此IoC容器必須有時作ArrayAccess界面)
+    // 指定IoC容器(不限定哪種IoC容器實作,但此IoC容器必須有實作ArrayAccess界面)
     Rde\Facade::setApplication($app);
 
 #### 實作系統服務外觀物件
