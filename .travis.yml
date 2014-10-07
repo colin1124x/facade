@@ -9,4 +9,5 @@ php:
 
 before_script:
   - composer self-update
+  - composer clearcache
   - composer install
