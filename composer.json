@@ -7,12 +7,6 @@
             "email": "colin1124x@gmail.com"
         }
     ],
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "git@rde-gitlab.vir888.com:colin1124x/application"
-        }
-    ],
     "require": {
         "php": ">=5.3.0"
     },
