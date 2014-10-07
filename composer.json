@@ -24,6 +24,6 @@
             "Fake\\": "fake/"
         }
     },
-    "preferred-install": "source",
+    "preferred-install": "dist",
     "minimum-stability": "dev"
 }

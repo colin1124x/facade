@@ -1,5 +1,5 @@
 ## Rde\Facade
-colin1124x/facade 1.0.4 2014-10
+colin1124x/facade 1.0.5 2014-10
 php >= 5.3
 
 ### 使用
