@@ -4,7 +4,7 @@ class FacadeTest extends PHPUnit_Framework_TestCase
 {
     public function testSetApplication()
     {
-        $app = new Fake\Application();
+        $app = new Rde\Application();
 
         Rde\Facade::setApplication($app);
 
@@ -14,13 +14,13 @@ class FacadeTest extends PHPUnit_Framework_TestCase
     public function testFetchApplication()
     {
         $this->assertInstanceOf(
-            'Fake\\Application',
+            'Rde\\Application',
             Rde\Facade::getApplication(), '檢查\Rde\Facade::getApplication');
         $this->assertInstanceOf(
-            'Fake\\Application',
+            'Rde\\Application',
             Fake\WrongFacade::getApplication(), '檢查\Fake\WrongFacade::getApplication');
         $this->assertInstanceOf(
-            'Fake\\Application',
+            'Rde\\Application',
             Fake\TestFacade::getApplication(), '檢查\Fake\TestFacade::getApplication');
     }
 
