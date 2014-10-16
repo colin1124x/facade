@@ -2,10 +2,10 @@
 
 use \Rde\Facade;
 
-class TestFacade extends Facade
+class ObjectFacade extends Facade
 {
     protected static function getAccessName()
     {
-        return 'test';
+        return 'test.object';
     }
 }

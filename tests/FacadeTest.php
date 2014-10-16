@@ -21,7 +21,7 @@ class FacadeTest extends PHPUnit_Framework_TestCase
             Fake\WrongFacade::getApplication(), '檢查\Fake\WrongFacade::getApplication');
         $this->assertInstanceOf(
             'Rde\\Application',
-            Fake\TestFacade::getApplication(), '檢查\Fake\TestFacade::getApplication');
+            Fake\ObjectFacade::getApplication(), '檢查\Fake\TestFacade::getApplication');
     }
 
     /**
@@ -35,33 +35,44 @@ class FacadeTest extends PHPUnit_Framework_TestCase
 
     public function testExtendRight()
     {
-        $app = Fake\TestFacade::getApplication();
-        $app['test'] = new Fake\MyService();
-        $app['test'];
+        $app = Rde\Facade::getApplication();
+
+        // object
+        $app['test.object'] = new Fake\MyService();
 
         $this->assertEquals(
-            $app['test'],
-            Fake\TestFacade::getInstance(), '檢查取得應用程序物件實體');
+            $app['test.object'],
+            Fake\ObjectFacade::getInstance(), '檢查取得應用程序物件實體');
 
         $this->assertEquals(
             array(
                 'method' => 'callMethodNameX',
                 'args' => array(3 ,2, 1),
             ),
-            Fake\TestFacade::callMethodNameX(3, 2, 1), '檢查反射狀態(3個參數)');
+            Fake\ObjectFacade::callMethodNameX(3, 2, 1), '檢查反射狀態(3個參數)');
 
         $this->assertEquals(
             array(
                 'method' => 'callMethodNameY',
                 'args' => array(),
             ),
-            Fake\TestFacade::callMethodNameY(), '檢查反射狀態(0個參數)');
+            Fake\ObjectFacade::callMethodNameY(), '檢查反射狀態(0個參數)');
 
         $this->assertEquals(
             array(
                 'method' => 'callMethodNameZ',
                 'args' => array(6, 5, 4, 3, 2, 1),
             ),
-            Fake\TestFacade::callMethodNameZ(6, 5, 4, 3, 2, 1), '檢查反射狀態(6個參數)');
+            Fake\ObjectFacade::callMethodNameZ(6, 5, 4, 3, 2, 1), '檢查反射狀態(6個參數)');
+
+        // static
+        $app['test.static'] = '\\Fake\\MyService';
+
+        $this->assertEquals(
+            array(
+                'method' => 'callMethodNameA',
+                'args' => array(6, 5, 4, 3, 2, 1),
+            ),
+            Fake\StaticFacade::callMethodNameA(6, 5, 4, 3, 2, 1), '檢查反射狀態(6個參數)');
     }
 }
