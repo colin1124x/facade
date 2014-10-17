@@ -44,34 +44,17 @@ abstract class Facade
     {
         $instance = static::getInstance();
 
-        return is_string($instance) ?
-            self::callStatic($instance, $method, $args) :
-            self::callObject($instance, $method, $args);
-    }
-
-    private static function callObject($instance, $method, $args)
-    {
+        $call = is_string($instance) ?
+            "{$instance}::{$method}" :
+            array($instance, $method);
         switch (count($args)) {
-            case 0: return $instance->$method();
-            case 1: return $instance->$method($args[0]);
-            case 2: return $instance->$method($args[0], $args[1]);
-            case 3: return $instance->$method($args[0], $args[1], $args[2]);
-            case 4: return $instance->$method($args[0], $args[1], $args[2], $args[3]);
+            case 0: return call_user_func($call);
+            case 1: return call_user_func($call, $args[0]);
+            case 2: return call_user_func($call, $args[0], $args[1]);
+            case 3: return call_user_func($call, $args[0], $args[1], $args[2]);
+            case 4: return call_user_func($call, $args[0], $args[1], $args[2], $args[3]);
         }
 
-        return call_user_func_array(array($instance, $method), $args);
-    }
-
-    private static function callStatic($class, $method, $args)
-    {
-        switch (count($args)) {
-            case 0: return $class::$method();
-            case 1: return $class::$method($args[0]);
-            case 2: return $class::$method($args[0], $args[1]);
-            case 3: return $class::$method($args[0], $args[1], $args[2]);
-            case 4: return $class::$method($args[0], $args[1], $args[2], $args[3]);
-        }
-
-        return call_user_func_array("{$class}::{$method}", $args);
+        return call_user_func_array($call, $args);
     }
 }
