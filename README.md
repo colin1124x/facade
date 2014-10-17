@@ -1,6 +1,14 @@
 ## Rde\Facade
-colin1124x/facade 1.0.5 2014-10
-php >= 5.3
+
+實驗性(參考自illuminate)
+
+[![Build Status](https://travis-ci.org/colin1124x/facade.svg)](https://travis-ci.org/colin1124x/facade)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/colin1124x/facade/badges/quality-score.png)](https://scrutinizer-ci.com/g/colin1124x/facade)
+[![Code Coverage](https://scrutinizer-ci.com/g/colin1124x/facade/badges/coverage.png)](https://scrutinizer-ci.com/g/colin1124x/facade)
+[![Latest Stable Version](https://poser.pugx.org/rde/facade/v/stable.svg)](https://packagist.org/packages/rde/facade) 
+[![Total Downloads](https://poser.pugx.org/rde/facade/downloads.svg)](https://packagist.org/packages/rde/facade) 
+[![Latest Unstable Version](https://poser.pugx.org/rde/facade/v/unstable.svg)](https://packagist.org/packages/rde/facade) 
+[![License](https://poser.pugx.org/rde/facade/license.svg)](https://packagist.org/packages/rde/facade)
 
 ### 使用
 #### 初始化
