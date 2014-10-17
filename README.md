@@ -1,6 +1,6 @@
 ## Rde\Facade
 
-實驗性(參考自[![illuminate]](https://github.com/illuminate))
+實驗性(參考自[illuminate](https://github.com/illuminate))
 
 [![Build Status](https://travis-ci.org/colin1124x/facade.svg)](https://travis-ci.org/colin1124x/facade)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/colin1124x/facade/badges/quality-score.png)](https://scrutinizer-ci.com/g/colin1124x/facade)
