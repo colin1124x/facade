@@ -1,6 +1,7 @@
 {
     "name": "rde/facade",
     "description": "外觀模式",
+    "license": "MIT",
     "authors": [
         {
             "name": "Colin",
