@@ -40,13 +40,17 @@ abstract class Facade
         return self::$app;
     }
 
-    public static function __callStatic($method, $args)
+    final public static function __callStatic($method, $args)
     {
         $instance = static::getInstance();
 
-        $call = is_string($instance) ?
-            "{$instance}::{$method}" :
-            array($instance, $method);
+        return self::call(
+            is_string($instance) ? "{$instance}::{$method}" : array($instance, $method),
+            $args);
+    }
+
+    private static function call($call, $args)
+    {
         switch (count($args)) {
             case 0: return call_user_func($call);
             case 1: return call_user_func($call, $args[0]);
