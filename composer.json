@@ -13,7 +13,8 @@
     },
     "require-dev": {
         "phpunit/phpunit": "~4",
-        "rde/container": "dev-master"
+        "rde/container": "dev-master",
+        "rde/common": "dev-0.x-master"
     },
     "autoload": {
         "psr-4": {
