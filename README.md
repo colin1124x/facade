@@ -9,6 +9,7 @@
 [![Total Downloads](https://poser.pugx.org/rde/facade/downloads.svg)](https://packagist.org/packages/rde/facade) 
 [![Latest Unstable Version](https://poser.pugx.org/rde/facade/v/unstable.svg)](https://packagist.org/packages/rde/facade) 
 [![License](https://poser.pugx.org/rde/facade/license.svg)](https://packagist.org/packages/rde/facade)
+[![SensioLabsInsight](https://insight.sensiolabs.com/projects/81c24bb5-0139-4987-9db5-96a6024ba7b3/mini.png)](https://insight.sensiolabs.com/projects/81c24bb5-0139-4987-9db5-96a6024ba7b3)
 
 ### 使用
 #### 初始化
